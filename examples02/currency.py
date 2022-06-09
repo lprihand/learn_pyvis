@@ -18,6 +18,9 @@ result+="{:,.2f}".format(int(value)/obj[currency.upper()]) + " " + basecurrency.
 
 print(result);
 
+'''
+https://mkaz.blog/code/python-string-format-cookbook/
+'''
 
 '''
 &q  is your main query.
