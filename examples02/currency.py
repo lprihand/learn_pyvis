@@ -3,7 +3,7 @@ import sys
 import urllib.request
 
 if (len(sys.argv[2]) & len(sys.argv[3])) != 3:
-    print("Usage: ./currencyrates.py lookup_currency base_currency. Example: ./currencyrates.py 10 cad usd")
+    print("Usage: ./currency.py lookup_currency base_currency. Example: ./currency.py 10 cad usd")
     sys.exit()
 
 value = sys.argv[1]
