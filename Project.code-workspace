@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "Workflow Manager",
+			"uri": "wfm:/"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"/actions/*": "yaml",
+			"/templates/*": "jinja",
+			"/workflows/*": "yaml"
+		}
+	}
+}
