@@ -58,7 +58,6 @@ class TokenManager:
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'Basic {token64}'
-            # 'Authorization': 'Basic c3J2MDAyOTM6T2pvbmdvbm90aG8kMTI=' # replace credential accordingly
         }
 
         try:
