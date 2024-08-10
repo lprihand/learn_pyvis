@@ -21,14 +21,24 @@ if validation == 2:
 
 token = token_manager.get_token()
 
+def api_post(fullClassName, filterExpression, resultFilter):
+    apiresponse = token_manager.post_api(token, fullClassName, filterExpression, resultFilter)
+    json_bytes = bytes(apiresponse.text, encoding='utf-8')
+    data_api = StringIO(json_bytes.decode('utf-8'))
+    df = pd.read_json(data_api)
+    return df
+
+    
 fullClassName = "service.Service"
 filterExpression = ""
 resultFilter = "serviceId","customerName","description","displayedName","id","numberOfSites"
 
-apiresponse = token_manager.post_api(token, fullClassName, filterExpression, resultFilter)
-json_bytes = bytes(apiresponse.text, encoding='utf-8')
-data_api = StringIO(json_bytes.decode('utf-8'))
-df = pd.read_json(data_api)
+apiresponse = api_post(fullClassName, filterExpression, resultFilter)
+
+# apiresponse = token_manager.post_api(token, fullClassName, filterExpression, resultFilter)
+# json_bytes = bytes(apiresponse.text, encoding='utf-8')
+# data_api = StringIO(json_bytes.decode('utf-8'))
+# df = pd.read_json(data_api)
 
 print(df)
 
